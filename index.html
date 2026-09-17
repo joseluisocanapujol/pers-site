@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfbf9;
+    --ink: #17191b;
+    --muted: #5b6167;
+    --accent: #2f5d50;
+    --rule: #dddad3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --ink: #eceae4;
+      --muted: #9aa0a6;
+      --accent: #7fbba7;
+      --rule: #33363c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --ink: #eceae4;
+    --muted: #9aa0a6;
+    --accent: #7fbba7;
+    --rule: #33363c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8vh 6vw;
+  }
+
+  main {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  p.role {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0 0 2.5rem;
+  }
+
+  ul.links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  ul.links li {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  ul.links a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.05rem 0.1rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+
+  ul.links a .label {
+    font-weight: 500;
+  }
+
+  ul.links a .arrow {
+    color: var(--muted);
+    transition: transform 0.15s ease, color 0.15s ease;
+    font-size: 0.95rem;
+  }
+
+  ul.links a:hover .arrow {
+    color: var(--accent);
+    transform: translateX(3px);
+  }
+
+  ul.links a:hover .label {
+    color: var(--accent);
+  }
+
+  footer {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Your Name</h1>
+    <p class="role">Short line about what you do</p>
+
+    <ul class="links">
+      <li>
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">
+          <span class="label">LinkedIn</span>
+          <span class="arrow">visit</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://scholar.google.com/citations?user=your-id" target="_blank" rel="noopener">
+          <span class="label">Google Scholar</span>
+          <span class="arrow">visit</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://example.com/your-cv.pdf" target="_blank" rel="noopener">
+          <span class="label">Curriculum Vitae</span>
+          <span class="arrow">PDF</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>&copy; <span id="year"></span> Your Name</footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
