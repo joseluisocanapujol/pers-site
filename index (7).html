@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dr. Ocana-Pujol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --bg: #fbfbf9;
+    --ink: #17191b;
+    --muted: #5b6167;
+    --accent: #2f5d50;
+    --accent-soft: #e7efec;
+    --rule: #dddad3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --ink: #eceae4;
+      --muted: #9aa0a6;
+      --accent: #7fbba7;
+      --accent-soft: #1c2724;
+      --rule: #33363c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --ink: #eceae4;
+    --muted: #9aa0a6;
+    --accent: #7fbba7;
+    --accent-soft: #1c2724;
+    --rule: #33363c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 9vh 6vw 10vh;
+  }
+
+  main {
+    max-width: 760px;
+    width: 100%;
+  }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.6rem;
+  }
+
+  .header-text {
+    flex: 1 1 320px;
+    min-width: 0;
+  }
+
+  .photo-placeholder {
+    flex: 0 0 auto;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    border: 1px dashed var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 0.78rem;
+    text-align: center;
+    line-height: 1.3;
+    overflow: hidden;
+  }
+
+  .photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.2rem, 5.5vw, 3rem);
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  p.role {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+  }
+
+  p.languages {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0 0 0.4rem;
+  }
+
+  p.communication {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0 0 1.6rem;
+  }
+
+  img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 0.05em 0 0.1em;
+    vertical-align: -0.1em;
+  }
+
+  p.bio {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    max-width: 58ch;
+    margin: 0 0 1.6rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.9rem;
+    margin: 0 0 3rem;
+    font-size: 0.98rem;
+  }
+
+  .contact-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+
+  .contact-links a:hover {
+    border-color: var(--accent);
+  }
+
+  .contact-links span.sep {
+    color: var(--rule);
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 0 0 2.6rem;
+  }
+
+  .fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.2rem;
+  }
+
+  @media (max-width: 640px) {
+    .fields {
+      grid-template-columns: 1fr;
+      gap: 2.4rem;
+    }
+  }
+
+  .field {
+    border-top: 3px solid var(--accent);
+    padding-top: 1.1rem;
+  }
+
+  .field h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem;
+  }
+
+  .field p {
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin: 0 0 1rem;
+  }
+
+  .field a.field-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.94rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.15rem;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .field a.field-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <div class="header-row">
+      <div class="header-text">
+        <h1>Jose L. Ocana-Pujol</h1>
+        <p class="role">IT Project Manager, PMP&reg; | Dr. sc. ETH Zürich</p>
+        <p class="languages">Multilingual Leader 🗣️: 🇦🇩 · 🇲🇽 · 🇦🇺 · 🇦🇹 · 🇨🇩 </p>
+        <p class="communication"> Science and Technology Communicator </p>
+      </div>
+      <div class="photo-placeholder">
+        <!-- Replace with: <img src="your-photo.jpg" alt="Jose L. Ocana-Pujol"> -->
+        your photo here
+      </div>
+    </div>
+
+    <p class="bio">Curious about the world, that's why I learn fast. Let's connect.</p>
+
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/joseluisopujol/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">·</span>
+      <a href="mailto:contact@ocanapujol.com">Email</a>
+    </div>
+
+    <hr class="divider">
+
+    <div class="fields">
+      <div class="field">
+        <h2>Research</h2>
+        <p>Line one about your previous research.<br>Line two continuing that thought.</p>
+        <a class="field-link" href="https://scholar.google.com/citations?user=xYkwpOwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar →</a>
+      </div>
+
+      <div class="field">
+        <h2>Professional</h2>
+        <p>Certifications, project management experience, and professional background.</p>
+        <a class="field-link" href="/cv.pdf" target="_blank" rel="noopener">View CV →</a>
+      </div>
+
+      <div class="field">
+        <h2>Science Communication</h2>
+        <p>Science slams, a podcast, and articles — talking about science outside the lab.</p>
+        <a class="field-link" href="/scicomm/">Explore →</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    twemoji.parse(document.body);
+  </script>
+</body>
+</html>
