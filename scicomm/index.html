@@ -128,7 +128,7 @@
   .pills a {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
     background: var(--accent-soft);
     color: var(--accent);
     text-decoration: none;
@@ -137,6 +137,12 @@
     padding: 0.5rem 0.9rem;
     border-radius: 999px;
     transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .pills a img.icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
   }
 
   .pills a:hover {
@@ -161,8 +167,8 @@ I've done it on live stages, over the microphone, and through a keyboard. A few 
 	<li>Famelab Switzerland (Finalist '24, Semifinalist '23) </li>
       </ul>
       <div class="pills">
-        <a href="https://www.youtube.com/watch?v=I9---Zbm8cE" target="_blank" rel="noopener">▶ Watch: Famelab Semifinal Zürich '23</a>
-        <a href="https://www.youtube.com/watch?v=aGyDkw4LAng" target="_blank" rel="noopener">▶ Watch: Famelab Final Switzeland '24</a>
+        <a href="https://www.youtube.com/watch?v=I9---Zbm8cE" target="_blank" rel="noopener"><img class="icon" src="https://cdn.simpleicons.org/youtube" alt="">Famelab Semifinal Zürich '23</a>
+        <a href="https://www.youtube.com/watch?v=aGyDkw4LAng" target="_blank" rel="noopener"><img class="icon" src="https://cdn.simpleicons.org/youtube" alt="">Famelab Final Switzeland '24</a>
       </div>
     </section>
 
@@ -170,8 +176,8 @@ I've done it on live stages, over the microphone, and through a keyboard. A few 
       <h2>Podcast</h2>
       <p class="desc">Over a microphone, the story gets room to unfold.</p>
       <div class="pills">
-        <a href="https://open.spotify.com/episode/3H3QoCDEJtcpvEXdhavrmR" target="_blank" rel="noopener">🎧 Spotify</a>
-        <a href="https://reatch.ch/publikationen/solars-surprising-success-in-the-energy-olympics" target="_blank" rel="noopener">🌐 Reatch site</a>
+        <a href="https://open.spotify.com/episode/3H3QoCDEJtcpvEXdhavrmR" target="_blank" rel="noopener"><img class="icon" src="https://cdn.simpleicons.org/spotify" alt="">Spotify</a>
+        <a href="https://reatch.ch/publikationen/solars-surprising-success-in-the-energy-olympics" target="_blank" rel="noopener"><img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/globe.svg" alt="">Reatch site</a>
       </div>
     </section>
 
@@ -179,7 +185,7 @@ I've done it on live stages, over the microphone, and through a keyboard. A few 
       <h2>Blog</h2>
       <p class="desc">Where it all started as a master's student. My own research, but also science at the intersection of geopolitics, the limits of the scientific method, sustainability's social and economic side. Some pieces made with an art school, words paired with illustrations.</p>
       <div class="pills">
-        <a href="https://www.masscience.com/author/jose-luis-ocana-pujol/" rel="noopener">📝 Read the articles (in Spanish)</a>
+        <a href="https://www.masscience.com/author/jose-luis-ocana-pujol/" rel="noopener"><img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/pen-line.svg" alt="">Read the articles (in Spanish)</a>
       </div>
     </section>
   </main>
@@ -189,3 +195,4 @@ I've done it on live stages, over the microphone, and through a keyboard. A few 
   </script>
 </body>
 </html>
+
