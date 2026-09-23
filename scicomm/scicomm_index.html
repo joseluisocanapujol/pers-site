@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science & Technology Communication — dr. Ocana-Pujol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --bg: #fbfbf9;
+    --ink: #17191b;
+    --muted: #5b6167;
+    --accent: #2f5d50;
+    --accent-soft: #e7efec;
+    --rule: #dddad3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --ink: #eceae4;
+      --muted: #9aa0a6;
+      --accent: #7fbba7;
+      --accent-soft: #1c2724;
+      --rule: #33363c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --ink: #eceae4;
+    --muted: #9aa0a6;
+    --accent: #7fbba7;
+    --accent-soft: #1c2724;
+    --rule: #33363c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 8vh 6vw 10vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  a.back {
+    display: inline-block;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    transition: color 0.15s ease;
+  }
+  a.back:hover { color: var(--accent); }
+
+  h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 5.5vw, 2.8rem);
+    line-height: 1.15;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  p.intro {
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.55;
+    margin: 0 0 3.5rem;
+    max-width: 46ch;
+  }
+
+  section.block {
+    border-left: 3px solid var(--accent);
+    padding: 0.1rem 0 0.1rem 1.4rem;
+    margin-bottom: 2.8rem;
+  }
+
+  section.block h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    margin: 0 0 0.5rem;
+  }
+
+  section.block p.desc {
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin: 0 0 1.1rem;
+  }
+
+  ul.items {
+    list-style: none;
+    margin: 0 0 1.1rem;
+    padding: 0;
+  }
+
+  ul.items li {
+    color: var(--ink);
+    font-size: 0.98rem;
+    padding: 0.35rem 0;
+  }
+
+  ul.items li::before {
+    content: "—";
+    color: var(--muted);
+    margin-right: 0.6rem;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .pills a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .pills a img.icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  @media (max-width: 560px) {
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--accent-soft);
+  }
+
+  .video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .pills a:hover {
+    transform: translateY(-1px);
+  }
+</style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">&larr; back to home</a>
+
+    <h1>Science & Technology Communication</h1>
+    <p class="intro">I have always been passionate about breaking down complex concepts into understandable pieces and communicating the bigger picture behind advances in science and technology.
+I've done it on live stages, over the microphone, and through a keyboard. A few examples below.</p>
+
+    <section class="block">
+      <h2>Science Slams</h2>
+      <p class="desc">A tightly timed slot. Limited material, and often no PowerPoint safety net. A live audience judging you on the spot. Here's where I've done it.</p>
+      <ul class="items">
+        <li>Science Slam Winterthur</li>
+        <li>Science Slam Bern </li>
+	<li>Famelab Switzerland (Finalist '24, Semifinalist '23) </li>
+      </ul>
+      <div class="pills">
+        <a href="https://www.youtube.com/watch?v=I9---Zbm8cE" target="_blank" rel="noopener"><img class="icon" src="https://cdn.simpleicons.org/youtube" alt="">Famelab Semifinal Zürich '23</a>
+        <a href="https://www.youtube.com/watch?v=aGyDkw4LAng" target="_blank" rel="noopener"><img class="icon" src="https://cdn.simpleicons.org/youtube" alt="">Famelab Final Switzeland '24</a>
+      </div>
+      <div class="video-grid">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/I9---Zbm8cE" title="Famelab Semifinal Zürich '23" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/aGyDkw4LAng" title="Famelab Final Switzerland '24" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Podcast</h2>
+      <p class="desc">Over a microphone, the story gets room to unfold.</p>
+      <div class="pills">
+        <a href="https://open.spotify.com/episode/3H3QoCDEJtcpvEXdhavrmR" target="_blank" rel="noopener"><img class="icon" src="https://cdn.simpleicons.org/spotify" alt="">Spotify</a>
+        <a href="https://reatch.ch/publikationen/solars-surprising-success-in-the-energy-olympics" target="_blank" rel="noopener"><img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/globe.svg" alt="">Reatch site</a>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Blog</h2>
+      <p class="desc">Where it all started as a master's student. My own research, but also science at the intersection of geopolitics, the limits of the scientific method, sustainability's social and economic side. Some pieces made with an art school, words paired with illustrations.</p>
+      <div class="pills">
+        <a href="https://www.masscience.com/author/jose-luis-ocana-pujol/" rel="noopener"><img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/pen-line.svg" alt="">Read the articles (in Spanish)</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    twemoji.parse(document.body);
+  </script>
+</body>
+</html>
